@@ -1,0 +1,384 @@
+/* CSS RESET */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+		font-family: 'Open Sans', sans-serif;
+
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* END OF CSS RESET */
+
+
+
+.container{
+	max-width: 768px;
+	margin: auto;
+	
+}
+
+
+.topnav{
+		width: 100%;
+	padding-top: 10px;
+}
+
+.mannekewrapper{
+	width: 100%;
+	height: 538px;
+	background: #9acab1;
+	margin-bottom: -7px;
+	margin-top: -6px;
+	
+}
+
+
+
+.visible{
+	visibility: visible !important;
+}
+
+
+.manneke{
+	max-width: 500px;
+	margin: 0px auto;
+}
+
+img{
+	max-width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+
+#body, #haar, #bril, #mond, #neus, #achtergrond, #acc{
+	position: absolute;
+}
+
+#achtergrond{
+	z-index: 0;
+	max-height: 538px;
+	min-width: 768px;
+}
+
+#body{
+	z-index: 1;
+
+}
+
+
+
+ul.nav li{
+	display: block;
+	float: left; 
+	height: 92px;
+	color: white;
+	cursor: pointer;
+	max-height: 92px;
+	overflow: hidden;
+}
+
+.navigatie{
+	height: 92px;
+	margin-bottom: 0px;
+}
+
+
+#haar{
+	z-index: 2;
+}
+
+#bril, #mond, #neus{
+	z-index: 3;
+}
+
+#acc{
+	z-index: 4;
+}
+
+.lijn{
+	background: #ff9900;
+	margin-top: -10px;
+}
+
+
+#feedbackwindow{
+background: #2a2c34;
+}
+
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+from {margin-left: 0px;}
+to {margin-left: -100px;}
+}
+
+
+.button{
+	background: #7b85a0;
+/*
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+*/
+	display: inline;
+	color: #fff;
+	padding: 15px;
+	margin: 5px;
+	font-family: sans-serif;
+	font-size: 16px;
+	font-weight: 900;
+	margin-top: 10px;
+	float: right;
+	margin-right: 15px;
+	cursor: pointer;
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 800;
+}
+
+#submitbutton.button{ 
+	border-radius: 0;
+	float: none;
+	padding: 20px;
+	margin: 0;
+}
+
+.body, .haar, .mond, .ogen, .neus, .bril, .achtergrond, .acc{
+	float: left;
+	max-height: 250px;
+	cursor: pointer;
+}
+
+.bodypartswrapper{
+height: 290px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	max-width: 100%;
+}
+
+.bodyparts{
+	max-height: 200px;
+	width: 2000px;
+	position: relative;
+}
+
+
+#empty{
+	background-image: url('../images/del.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+
+
+.small, .medium, .big{
+	position: relative;
+	float: left;
+}
+
+.small{
+	max-width: 125px;
+	min-width: 125px;
+	min-height: 125px;
+	overflow: hidden;
+}
+
+.small img{
+	max-width: 125px;
+}
+
+.small img#achtergrond{
+	width: 125px !important;
+	min-width: 125px !important;
+	height: 125px;
+}
+
+
+
+.big{
+	max-width: 500px;
+	overflow: hidden;
+	min-height: 500px;
+	min-width: 500px;
+}
+
+.big img{
+	max-width: 500px;
+}
+
+.big img#achtergrond{
+	width: 500px !important;
+	min-width: 500px !important;
+	height: 500px;
+}
+
+
+.medium{
+	max-width: 250px;
+	overflow: hidden;
+	min-height: 250px;
+	min-width: 250px;
+}
+
+.medium img{
+	max-width: 250px;
+}
+
+.medium img#achtergrond{
+	width: 250px !important;
+	min-width: 250px !important;
+	height: 250px;
+}
+
+
+.feedback{
+	position: absolute;
+	z-index: 20;
+	min-height: 250px;
+	background: #2a2c34;
+	color: white;
+	width: 100%;
+	top:-290px;
+	padding: 15px;
+	padding-left: 120px;
+}
+
+
+
+
+.succes{
+	position: absolute;
+	z-index: 8;
+	top:-200px;
+	background: #4be28c;
+	font-weight: 800;
+	text-transform: uppercase;
+	padding: 40px 0px 40px 100px;
+	width: 768px;
+	color: #fff;
+}
+
+.error{
+	color: #d56d6f;
+	float: none;
+	margin-top: 10px;
+	padding: 15px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	width: 520px;
+
+}
+
+#closebutton{
+	margin-left: 520px;
+	margin-bottom: 15px;
+}
+
+
+.naam{
+	padding: 20px;
+	background: #3b4148;
+	font-size: 16px;
+	border: none;
+	width: 420px;
+	color: #ccc;
+	border-radius: 0;
+	-webkit-appearance: none;
+}
+
+
+h2{
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 800;
+	margin-bottom: 20px;
+}
+
+h2.naam{
+	position: absolute;
+	z-index: 5;
+	top: 0px;
+	background: none;
+	color: #fff;
+}
+
+
+.prev{
+	position: absolute;
+	z-index: 6;
+	margin-top:100px;
+	padding: 15px;
+	background: #d3d3d3;
+}
+
+
+.next{
+	position: absolute;
+	z-index: 6;
+	margin-top:100px;
+	padding: 15px;
+	background: #d3d3d3;
+	margin-left: 730px;
+	}
+	
+.wrapper.nee{
+	opacity: 0.5;
+}
+
+.wrapper:hover{
+	cursor: pointer;
+}
+
+
+.medium h2{
+	font-size: 12px;
+}
