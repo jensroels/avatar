@@ -71,7 +71,7 @@ var scroll = 0;
 	//als er op de eerste savebutton geklikt wordt schijf het formulier naar beneden om de naam in te vullen
 	$("#savebutton").click(function(event){
 		$(".feedback").animate({"top":"250"}, 500);
-		$("#naam").focus();
+		//$("#naam").focus();
 		return false;
 	});
 	

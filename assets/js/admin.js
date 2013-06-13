@@ -79,9 +79,8 @@ function getMannekes()
 
  });
 			
-		$(".wrapper").click(function(){
-	update($(this).data('id'));
-});		
+		//$(".wrapper").click(function(){
+	
 
 
 
@@ -100,17 +99,22 @@ function getMannekes()
 					id: id
 				}
 			}).done(function(msg) {
-			var div = '<div class="wrapper '+size+' '+msg[0].zichtbaar+'" data-id="'+msg[0].id+'"><h2 class="naam">'+msg[0].naam+'</h2><img id="bril" src="'+msg[0].bril+'"/><img id="acc" src="'+msg[0].acc+'"/><img id="mond" src="'+msg[0].mond+'"/><img id="neus" src="'+msg[0].neus+'"/><img id="haar" src="'+msg[0].haar+'"/><img id="body" src="'+msg[0].body+'"/><img id="achtergrond" src="'+msg[0].achtergrond+'"/></div>';	
+			var div = '<div id="'+msg[0].id+'" class="wrapper '+size+' '+msg[0].zichtbaar+'" data-id="'+msg[0].id+'"><h2 class="naam">'+msg[0].naam+'</h2><img id="bril" src="'+msg[0].bril+'"/><img id="acc" src="'+msg[0].acc+'"/><img id="mond" src="'+msg[0].mond+'"/><img id="neus" src="'+msg[0].neus+'"/><img id="haar" src="'+msg[0].haar+'"/><img id="body" src="'+msg[0].body+'"/><img id="achtergrond" src="'+msg[0].achtergrond+'"/></div>';	
 
 $('#container').prepend(div);
 
 
 });
 
-	}
-	
 	
 
+
+	}
+	
+
+$("body").delegate(".wrapper", "click", function() {
+	update($(this).data('id'));
+});	
 	
 	
 	

@@ -3,7 +3,13 @@ include_once "config.php";
 
 $id = $_POST['id'];
 
-$query = "SELECT * FROM ".$table." where id =".$id;
+
+$query = "SELECT * FROM (
+  SELECT * FROM tblMannekes WHERE zichtbaar='ja' 
+    ORDER BY id DESC LIMIT 50
+) AS temptable 
+ORDER BY RAND()
+LIMIT 1";
 $result = $mysqli->query($query);
 
   while($row = $result->fetch_array(MYSQL_ASSOC)) {

@@ -3,7 +3,7 @@ include_once "config.php";
 
 
 $query = "SELECT * FROM tblMannekes WHERE zichtbaar='ja' ORDER BY id DESC LIMIT 1";
-$result = $mysqli->query($query);
+
 
   while($row = $result->fetch_array(MYSQL_ASSOC)) {
             $myArray[] = $row;

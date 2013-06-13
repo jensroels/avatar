@@ -197,16 +197,37 @@ to {margin-left: -100px;}
 	cursor: pointer;
 }
 
+img.achtergrond{
+	max-height: 290px;
+}
+
+img.neus, img.mond, img.bril, img.acc{
+	max-height: 500px;
+	margin-left: -200px;
+	margin-top: -100px;	
+}
+
+img.neus:first{
+	margin-left: -100px;
+}
+
+
+img.mond{
+	margin-top: -150px;
+}
+
 .bodypartswrapper{
 height: 290px;
-	overflow-x: scroll;
+margin-top: -3px;
+overflow-x:scroll;
 	overflow-y: hidden;
 	max-width: 100%;
+	
 }
 
 .bodyparts{
 	max-height: 200px;
-	width: 2000px;
+	width: 4000px;
 	position: relative;
 }
 
@@ -347,6 +368,7 @@ h2.naam{
 	position: absolute;
 	z-index: 5;
 	top: 0px;
+
 	background: none;
 	color: #fff;
 }
@@ -355,7 +377,7 @@ h2.naam{
 .prev{
 	position: absolute;
 	z-index: 6;
-	margin-top:100px;
+	margin-top:120px;
 	padding: 15px;
 	background: #d3d3d3;
 }
@@ -364,7 +386,7 @@ h2.naam{
 .next{
 	position: absolute;
 	z-index: 6;
-	margin-top:100px;
+	margin-top:120px;
 	padding: 15px;
 	background: #d3d3d3;
 	margin-left: 730px;
@@ -382,3 +404,13 @@ h2.naam{
 .medium h2{
 	font-size: 12px;
 }
+
+.ani{
+	position: absolute;
+}
+
+.new{
+	left: 500px;
+}
+
+
