@@ -1,11 +1,35 @@
 $(document).ready(function () {
 
-//$(document).bind('touchmove', false);
 
 
+
+
+
+
+
+
+
+/*
+setInterval(function(){
+  aantalsec++;
+  console.log(aantalsec);
+  if(aantalsec>30){	  	
+	  $("div.overlay").animate({"top":"0"},500);
+  }
+}, 500);
+
+
+$(document).click(function(){
+	aantalsec=0;
+	 $("div.overlay").animate({"top":"-1014"},500);
+})
+*/
 
 //alle bodyparts images hiden
 $(".bodyparts img").hide();
+
+
+
 
 //om te beginnen laten we alleen maar de images zien van de body's
 $("img.body").show();
@@ -36,21 +60,28 @@ var scroll = 0;
 	$("img").click(function(event){
 		var bodypart = "#"+$(this).attr("class");
 		$(bodypart).attr("src",$(this).attr("src")); 
+		//alert($(this).data("zin"));
 	});
 	
 	//Bij een klik op het next pijltje verschuiven de mannekes naar links
 	$(".next").click(function(event){
-		//scroll = $(".bodyparts").position().left+50;
-		scroll = $(".bodyparts").position().left-250;
-		console.log(scroll);
-		$(".bodyparts").animate({"left":scroll}, 50);
+	  var leftPos = $('.bodypartswrapper').scrollLeft();
+    console.log(leftPos); 
+    $(".bodypartswrapper").animate({
+        scrollLeft: leftPos + 768
+    }, 100);
 	});
 	
 	//Bij het klikken op vorige knop verschuiven de mannekes naar rechts
 	$(".prev").click(function(event){
-		scrollp = $(".bodyparts").position().left+250;
-		console.log(scrollp);
-		$(".bodyparts").animate({"left":scrollp}, 50);
+	
+	 var leftPos = $('.bodypartswrapper').scrollLeft();
+    console.log(leftPos);    
+    $(".bodypartswrapper").animate({
+        scrollLeft: leftPos - 768
+    }, 100);
+	
+	
 	});
 	
 	//Als er op de navigatie van de verschillende bodyparts wordt geklikt verschijnen de bijhorende bodyparts images
@@ -58,6 +89,10 @@ var scroll = 0;
 		var bodypart = "img."+$(this).attr("class");
 		$(".bodyparts img").hide();
 		$(bodypart).show();
+		$(".bodypartswrapper").animate({
+        scrollLeft: 0
+    }, 10);
+
 		console.log($(".bodyparts").position().left);
 		res();
 	});

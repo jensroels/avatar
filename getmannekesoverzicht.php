@@ -1,10 +1,9 @@
 <?php
 include_once "config.php"; 
 
+$offset = $_POST['offset'];
 
-
-
-$query = "SELECT * FROM tblMannekes WHERE zichtbaar='ja' ORDER BY id DESC LIMIT 15";
+$query = "SELECT * FROM tblMannekes WHERE zichtbaar='ja' ORDER BY id DESC LIMIT 15 OFFSET " . $offset . " ";
 $result = $mysqli->query($query);
 
   while($row = $result->fetch_array(MYSQL_ASSOC)) {

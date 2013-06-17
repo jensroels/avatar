@@ -1,18 +1,11 @@
 $(document).ready(function () {
 
 var mannekes = new Array();
+var offset = 0;
 
 
-getMannekes();
+getMannekes(offset);
 
-
-
-window.setInterval(function(){
-  //checkForNew();
-  getManneke(5,"big");
-}, 1500);
-
- 
 
 /*
 window.setInterval(function(){
@@ -22,28 +15,32 @@ window.setInterval(function(){
 */
 
 
+$("#more").click(function(){
+	offset +=8;
+	getMannekes(offset);
+	})
 
 
 
 
-function getMannekes()
+
+
+function getMannekes(offset)
 	{
 		$.ajax({
 				type: "POST",
-				url: "getmannekes.php"
+				url: "getmannekesoverzicht.php",
+				data:{
+					offset:20
+				}
 			}).done(function(msg) {
 			mannekes = msg;		
 			latest = msg[0].id;	
 			$.each( msg, function(k, v){
-				var div = '<div id="'+msg[k].id+'"class="wrapper big"><div class="ani"><h2 class="naam">'+msg[k].naam+'</h2><img id="bril" src="'+msg[k].bril+'"/><img id="acc" src="'+msg[k].acc+'"/><img id="mond" src="'+msg[k].mond+'"/><img id="neus" src="'+msg[k].neus+'"/><img id="haar" src="'+msg[k].haar+'"/><img id="body" src="'+msg[k].body+'"/><img id="achtergrond" src="'+msg[k].achtergrond+'"/></div></div>';
-				$('#container').append(div);
+				var div = '<div class="item"><div data-url="http://sharrre.com" id="'+msg[k].id+'"class="wrapper big"><div class="ani"><h2 class="naam">'+msg[k].naam+'</h2><img id="bril" src="'+msg[k].bril+'"/><img id="acc" src="'+msg[k].acc+'"/><img id="mond" src="'+msg[k].mond+'"/><img id="neus" src="'+msg[k].neus+'"/><img id="haar" src="'+msg[k].haar+'"/><img id="body" src="'+msg[k].body+'"/><img id="achtergrond" src="'+msg[k].achtergrond+'"/></div></div></div>';
+				$('.overzicht').append(div);
 
  });
-
-
-			
-				
-
 
 
 });
@@ -76,10 +73,8 @@ console.log("id van nieuwe" + msg[0].id);
 //console.log(aantal);
 
 $("#container div:nth-child("+random+") div:first-child").animate({"left":"-500px"},500);
-$("#container div:nth-child("+random+") div:last-child").animate({"left":"0"},500,function(){
-if($("#container div:nth-child("+random+")").children().length >1){
+$("#container div:nth-child("+random+") div:last-child").animate({"left":"0"},500,function(){	
 	$("#container div:nth-child("+random+") div:first-child").remove();
-	}
 });
 
 

@@ -66,15 +66,18 @@ table {
 }
 
 
+html, body{
+	overflow-y: hidden;	
+}
+
 .topnav{
-		width: 100%;
+	width: 100%;
 	padding-top: 10px;
 }
 
 .mannekewrapper{
 	width: 100%;
 	height: 538px;
-	background: #9acab1;
 	margin-bottom: -7px;
 	margin-top: -6px;
 	
@@ -140,8 +143,12 @@ ul.nav li{
 	z-index: 3;
 }
 
-#acc{
+#bril{
 	z-index: 4;
+}
+
+#acc{
+	z-index: 5;
 }
 
 .lijn{
@@ -227,7 +234,7 @@ overflow-x:scroll;
 
 .bodyparts{
 	max-height: 200px;
-	width: 4000px;
+	width: 4500px;
 	position: relative;
 }
 
@@ -269,6 +276,7 @@ overflow-x:scroll;
 	overflow: hidden;
 	min-height: 500px;
 	min-width: 500px;
+	height: 500px;
 }
 
 .big img{
@@ -411,6 +419,45 @@ h2.naam{
 
 .new{
 	left: 500px;
+}
+
+
+.overlay{
+	position: absolute;
+	z-index: 12;
+	top:-1014px;
+}
+
+.overzicht{
+	width: 500px;
+	margin: auto;
+	margin-top: 50px;
+}
+
+
+#achtergrondd{
+	width: 500px;
+	height: 500px;
+}
+
+.item{
+	margin-bottom: 20px;
+	min-height: 560px;
+}
+
+
+
+
+.bodypartswrapper::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 11px;
+    height: 11px;
+}
+
+.bodypartswrapper::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 2px solid white; /* should match background, can't be transparent */
+    background-color: rgba(0, 0, 0, .5);
 }
 
 

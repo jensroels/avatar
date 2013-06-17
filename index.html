@@ -11,7 +11,9 @@
     <link href="assets/css/screen.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
-    
+            <link rel="apple-touch-icon" sizes="72x72" href="ipad.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="ipadretina.png" />
+<link rel="apple-touch-icon" href="ipadretina.png"/>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
   </head>
   
@@ -19,7 +21,8 @@
   <div class="feedback">
   	  <div id="closebutton"><img src="assets/images/close.png" alt="close"/></div>
   	  <h2>Geef je designosource mannetje nog een toepasselijke naam</h2>
-	  <input type="text" class="naam" name="naam" id="naam" placeholder="Insert awesome name!"/>
+	  <input type="text" class="naam" name="naam" id="naam"  autocapitalize="off"
+autocorrect="off" placeholder="Insert awesome name!"/>
 	  <div id="submitbutton" class="button">SAVE</div>
       <div class="error">
 	  	<h2></h2>
@@ -28,7 +31,7 @@
   
   
     <div class="container">
- 
+ <div class="overlay"><img src="assets/images/overlay.png"/></div>
 	     <div class="succes">
 	    Thank you for saving! you can create another one if you like.
 	    </div>
@@ -57,7 +60,8 @@
 
 
 <div class="bodypartswrapper">
-<!--
+
+
 <div class="prev">
 	<img src="assets/images/prev.png" alt="vorige"/>	
 </div>
@@ -66,8 +70,8 @@
 	<img src="assets/images/next.png" alt="volgende"/>
 	
 </div>
--->
-<div class="bodyparts">
+
+<div class="bodyparts" id="scrolling">
 
 	<!--
 Hier komen alle verschillende body parts in
@@ -82,14 +86,16 @@ Hier komen alle verschillende body parts in
 	<img class="body" src="assets/img/body/6.png"/>
 	<img class="body" src="assets/img/body/7.png"/>
 	<img class="body" src="assets/img/body/8.png"/>
-	<img class="body" src="assets/img/body/1.png"/>
-	<img class="body" src="assets/img/body/2.png"/>
-	<img class="body" src="assets/img/body/3.png"/>
-	<img class="body" src="assets/img/body/4.png"/>
-	<img class="body" src="assets/img/body/5.png"/>
-	<img class="body" src="assets/img/body/6.png"/>
-	<img class="body" src="assets/img/body/1.png"/>
-	<img class="body" src="assets/img/body/2.png"/>
+	<img class="body" src="assets/img/body/9.png"/>
+	<img class="body" src="assets/img/body/10.png"/>
+	<img class="body" src="assets/img/body/11.png"/>
+	<img class="body" src="assets/img/body/12.png"/>
+	<img class="body" data-zin="Gym tanning laundry!" src="assets/img/body/13.png"/>
+	<img class="body" src="assets/img/body/14.png"/>
+	<img class="body" src="assets/img/body/15.png"/>
+	<img class="body" src="assets/img/body/16.png"/>
+	<img class="body" src="assets/img/body/17.png"/>
+	<img class="body" src="assets/img/body/18.png"/>
 	
 	<img class="haar" src="assets/img/haar/1.png"/>
 	<img class="haar" src="assets/img/haar/2.png"/>
@@ -106,6 +112,9 @@ Hier komen alle verschillende body parts in
 	<img class="haar" src="assets/img/haar/13.png"/>
 	<img class="haar" src="assets/img/haar/14.png"/>
 	<img class="haar" src="assets/img/haar/15.png"/>
+	<img class="haar" src="assets/img/haar/16.png"/>
+	<img class="haar" src="assets/img/haar/17.png"/>
+	<img class="haar" src="assets/img/haar/18.png"/>
 	<img class="haar" id="empty" src="assets/img/emty.png"/>
 	
 	
@@ -120,10 +129,13 @@ Hier komen alle verschillende body parts in
 	<img class="bril" src="assets/img/bril/9.png"/>
 	<img class="bril" src="assets/img/bril/10.png"/>
 	<img class="bril" src="assets/img/bril/11.png"/>
-	<img class="bril" src="assets/img/bril/1.png"/>
-	<img class="bril" src="assets/img/bril/2.png"/>
-	<img class="bril" src="assets/img/bril/3.png"/>
-	<img class="bril" src="assets/img/bril/4.png"/>
+	<img class="bril" src="assets/img/bril/12.png"/>
+	<img class="bril" src="assets/img/bril/13.png"/>
+	<img class="bril" src="assets/img/bril/14.png"/>
+	<img class="bril" src="assets/img/bril/15.png"/>
+	<img class="bril" src="assets/img/bril/16.png"/>
+	<img class="bril" src="assets/img/bril/17.png"/>
+	<img class="bril" src="assets/img/bril/18.png"/>
 	<img class="bril" id="empty" src="assets/img/emty.png"/>
 	
 	<img class="mond" src="assets/img/mond/1.png"/>
@@ -154,11 +166,16 @@ Hier komen alle verschillende body parts in
 	<img class="neus" src="assets/img/neus/6.png"/>
 	<img class="neus" src="assets/img/neus/7.png"/>
 	<img class="neus" src="assets/img/neus/8.png"/>
-	<img class="neus" src="assets/img/neus/1.png"/>
-	<img class="neus" src="assets/img/neus/2.png"/>
-	<img class="neus" src="assets/img/neus/3.png"/>
-	<img class="neus" src="assets/img/neus/4.png"/>
-	<img class="neus" src="assets/img/neus/5.png"/>
+	<img class="neus" src="assets/img/neus/9.png"/>
+	<img class="neus" src="assets/img/neus/10.png"/>
+	<img class="neus" src="assets/img/neus/11.png"/>
+	<img class="neus" src="assets/img/neus/12.png"/>
+	<img class="neus" src="assets/img/neus/13.png"/>
+	<img class="neus" src="assets/img/neus/14.png"/>
+	<img class="neus" src="assets/img/neus/15.png"/>
+	<img class="neus" src="assets/img/neus/16.png"/>
+	<img class="neus" src="assets/img/neus/17.png"/>
+	<img class="neus" src="assets/img/neus/18.png"/>
 	<img class="neus" id="empty" src="assets/img/emty.png"/>
 	
 	
@@ -171,12 +188,29 @@ Hier komen alle verschillende body parts in
 	<img class="acc" src="assets/img/acc/7.png"/>
 	<img class="acc" src="assets/img/acc/8.png"/>
 	<img class="acc" src="assets/img/acc/9.png"/>
-	<img class="acc" src="assets/img/acc/1.png"/>
-	<img class="acc" src="assets/img/acc/2.png"/>
-	<img class="acc" src="assets/img/acc/3.png"/>
-	<img class="acc" src="assets/img/acc/4.png"/>
+	<img class="acc" src="assets/img/acc/10.png"/>
+	<img class="acc" src="assets/img/acc/11.png"/>
+	<img class="acc" src="assets/img/acc/12.png"/>
+	<img class="acc" src="assets/img/acc/13.png"/>
+	<img class="acc" src="assets/img/acc/14.png"/>
+	<img class="acc" src="assets/img/acc/15.png"/>
+	<img class="acc" src="assets/img/acc/16.png"/>
+	<img class="acc" src="assets/img/acc/17.png"/>
+	<img class="acc" src="assets/img/acc/18.png"/>
 	<img class="acc" id="empty" src="assets/img/emty.png"/>
 	
+	<img class="achtergrond" src="assets/img/achtergrond/beige.jpg"/>
+	<img class="achtergrond" src="assets/img/achtergrond/dgroen.jpg"/>
+	<img class="achtergrond" src="assets/img/achtergrond/geel.jpg"/>
+	<img class="achtergrond" src="assets/img/achtergrond/groen.jpg"/>
+	<img class="achtergrond" src="assets/img/achtergrond/oranje.jpg"/>
+	<img class="achtergrond" src="assets/img/achtergrond/zwart.jpg"/>
+	<img class="achtergrond" src="assets/img/achtergrond/beige.jpg"/>
+	<img class="achtergrond" src="assets/img/achtergrond/dgroen.jpg"/>
+	<img class="achtergrond" src="assets/img/achtergrond/geel.jpg"/>
+	<img class="achtergrond" src="assets/img/achtergrond/groen.jpg"/>
+	<img class="achtergrond" src="assets/img/achtergrond/oranje.jpg"/>
+	<img class="achtergrond" src="assets/img/achtergrond/zwart.jpg"/>
 	<img class="achtergrond" src="assets/img/achtergrond/beige.jpg"/>
 	<img class="achtergrond" src="assets/img/achtergrond/dgroen.jpg"/>
 	<img class="achtergrond" src="assets/img/achtergrond/geel.jpg"/>

@@ -6,7 +6,7 @@ $id = $_POST['id'];
 
 $query = "SELECT * FROM (
   SELECT * FROM tblMannekes WHERE zichtbaar='ja' 
-    ORDER BY id DESC LIMIT 50
+    ORDER BY id DESC LIMIT 20
 ) AS temptable 
 ORDER BY RAND()
 LIMIT 1";
